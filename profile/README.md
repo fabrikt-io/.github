@@ -5,12 +5,10 @@
 <p align="center"><b>OpenAPI 3 → idiomatic Kotlin. Not a scaffold — a permanent build step.</b></p>
 
 <p align="center">
-
-[![Maven Central](https://img.shields.io/maven-central/v/io.fabrikt/fabrikt?style=flat-square&color=7c3aed)](https://central.sonatype.com/artifact/io.fabrikt/fabrikt)
-[![GitHub Stars](https://img.shields.io/github/stars/fabrikt-io/fabrikt?style=flat-square&color=7c3aed)](https://github.com/fabrikt-io/fabrikt/stargazers)
-[![Contributors](https://img.shields.io/github/contributors/fabrikt-io/fabrikt?style=flat-square&color=7c3aed)](https://github.com/fabrikt-io/fabrikt/graphs/contributors)
-[![License](https://img.shields.io/github/license/fabrikt-io/fabrikt?style=flat-square&color=7c3aed)](https://github.com/fabrikt-io/fabrikt/blob/master/LICENSE)
-
+  <a href="https://central.sonatype.com/artifact/io.fabrikt/fabrikt"><img src="https://img.shields.io/maven-central/v/io.fabrikt/fabrikt?style=flat-square&color=7c3aed" alt="Maven Central"></a>
+  <a href="https://github.com/fabrikt-io/fabrikt/stargazers"><img src="https://img.shields.io/github/stars/fabrikt-io/fabrikt?style=flat-square&color=7c3aed" alt="GitHub Stars"></a>
+  <a href="https://github.com/fabrikt-io/fabrikt/graphs/contributors"><img src="https://img.shields.io/github/contributors/fabrikt-io/fabrikt?style=flat-square&color=7c3aed" alt="Contributors"></a>
+  <a href="https://github.com/fabrikt-io/fabrikt/blob/master/LICENSE"><img src="https://img.shields.io/github/license/fabrikt-io/fabrikt?style=flat-square&color=7c3aed" alt="License"></a>
 </p>
 
 ---
