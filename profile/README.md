@@ -1,4 +1,4 @@
-# fabrikt
+<img src="../assets/fabrikt-horizontal-final.png" alt="fabrikt" height="80">
 
 **OpenAPI 3 → idiomatic Kotlin. Not a scaffold — a permanent build step.**
 
