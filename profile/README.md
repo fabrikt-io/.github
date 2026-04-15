@@ -13,7 +13,7 @@
 
 ---
 
-fabrikt generates null-safe Kotlin models, HTTP clients, and server controllers directly from your OpenAPI 3 spec. Wire it into your build once and your code and contract stay in sync as your API evolves — no manual updates, no drift.
+Generate null-safe Kotlin models, HTTP clients, and server controllers directly from your OpenAPI 3 spec. Wire it into your build once and your code and contract stay in sync as your API evolves — no manual updates, no drift.
 
 ### **[→ Try it in the Playground](https://try.fabrikt.io)**
 *Paste your OpenAPI spec and see what gets generated. No installation required.*
