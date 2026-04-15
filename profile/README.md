@@ -1,6 +1,8 @@
-<img src="../assets/fabrikt-horizontal-final.png" alt="fabrikt" height="80">
+<p align="center">
+  <img src="../assets/fabrikt-horizontal-final.png" alt="fabrikt" height="80">
+</p>
 
-**OpenAPI 3 → idiomatic Kotlin. Not a scaffold — a permanent build step.**
+<p align="center"><b>OpenAPI 3 → idiomatic Kotlin. Not a scaffold — a permanent build step.</b></p>
 
 [![Maven Central](https://img.shields.io/maven-central/v/io.fabrikt/fabrikt?style=flat-square&color=7c3aed)](https://central.sonatype.com/artifact/io.fabrikt/fabrikt)
 [![GitHub Stars](https://img.shields.io/github/stars/fabrikt-io/fabrikt?style=flat-square&color=7c3aed)](https://github.com/fabrikt-io/fabrikt/stargazers)
