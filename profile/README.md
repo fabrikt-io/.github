@@ -32,24 +32,8 @@ fabrikt generates null-safe Kotlin models, HTTP clients, and server controllers 
 
 ### Quick start
 
-The easiest integration is the [Gradle plugin](https://github.com/acanda/fabrikt-gradle-plugin):
-
-```kotlin
-// build.gradle.kts
-plugins {
-    id("ch.acanda.gradle.fabrikt") version "1.31.2"
-}
-
-fabrikt {
-    generate("api") {
-        apiFile = file("src/main/openapi/api.yaml")
-        basePackage = "com.example"
-    }
-}
-```
-
-Also available as a custom Gradle task, Maven exec plugin, CLI jar, or Docker image.
-[→ Full usage guide & configuration options](https://github.com/fabrikt-io/fabrikt#usage-instructions)
+Integrates via Gradle plugin, Maven, CLI jar, or Docker.
+[→ Full setup guide & configuration options](https://github.com/fabrikt-io/fabrikt#usage-instructions)
 
 ---
 
