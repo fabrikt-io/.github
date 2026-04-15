@@ -1,6 +1,6 @@
 # fabrikt
 
-**OpenAPI 3 → production-ready Kotlin. Permanently wired into your build.**
+**OpenAPI 3 → idiomatic Kotlin. Not a scaffold — a permanent build step.**
 
 [![Maven Central](https://img.shields.io/maven-central/v/io.fabrikt/fabrikt?style=flat-square&color=7c3aed)](https://central.sonatype.com/artifact/io.fabrikt/fabrikt)
 [![GitHub Stars](https://img.shields.io/github/stars/fabrikt-io/fabrikt?style=flat-square&color=7c3aed)](https://github.com/fabrikt-io/fabrikt/stargazers)
@@ -9,7 +9,12 @@
 
 ---
 
-fabrikt takes an OpenAPI 3 spec and generates idiomatic, null-safe Kotlin — models, HTTP clients, and server controllers — for the frameworks you already use. More than a bootstrapping tool, it stays wired into your build and keeps code and contract in sync as your API evolves.
+fabrikt generates null-safe Kotlin models, HTTP clients, and server controllers directly from your OpenAPI 3 spec. Wire it into your build once and your code and contract stay in sync as your API evolves — no manual updates, no drift.
+
+### **[→ Try it in the Playground](https://try.fabrikt.io)**
+*Paste your OpenAPI spec and see what gets generated. No installation required.*
+
+---
 
 ### What gets generated
 
@@ -19,34 +24,29 @@ fabrikt takes an OpenAPI 3 spec and generates idiomatic, null-safe Kotlin — mo
 | **Clients** | Type-safe HTTP clients | OkHttp · OpenFeign · Spring HTTP Interface · Ktor |
 | **Controllers** | Annotated server interfaces | Spring MVC · Micronaut · Ktor |
 
+---
+
 ### Quick start
+
+The easiest integration is the [Gradle plugin](https://github.com/acanda/fabrikt-gradle-plugin):
 
 ```kotlin
 // build.gradle.kts
-val fabrikt: Configuration by configurations.creating
-
-tasks.register<JavaExec>("generateCode") {
-    inputs.files("src/main/openapi/api.yaml")
-    outputs.dir("build/generated")
-    classpath(fabrikt)
-    mainClass.set("com.cjbooms.fabrikt.cli.CodeGen")
-    args = listOf(
-        "--output-directory", "build/generated",
-        "--base-package",     "com.example",
-        "--api-file",         "src/main/openapi/api.yaml",
-        "--targets",          "http_models",
-        "--targets",          "client",
-        "--targets",          "controllers"
-    )
+plugins {
+    id("ch.acanda.gradle.fabrikt") version "1.31.2"
 }
 
-dependencies {
-    fabrikt("io.fabrikt:fabrikt:+") // pin this in production
+fabrikt {
+    generate("api") {
+        apiFile = file("src/main/openapi/api.yaml")
+        basePackage = "com.example"
+    }
 }
 ```
 
-Or use the [Gradle plugin](https://github.com/acanda/fabrikt-gradle-plugin), Maven exec plugin, CLI jar, or Docker image — see the [full usage guide](https://github.com/fabrikt-io/fabrikt#usage-instructions).
+Also available as a custom Gradle task, Maven exec plugin, CLI jar, or Docker image.
+[→ Full usage guide & configuration options](https://github.com/fabrikt-io/fabrikt#usage-instructions)
 
 ---
 
-**[→ fabrikt-io/fabrikt](https://github.com/fabrikt-io/fabrikt)** &nbsp;·&nbsp; **[Try it in the Playground](https://try.fabrikt.io)** &nbsp;·&nbsp; **[Maven Central](https://central.sonatype.com/artifact/io.fabrikt/fabrikt)** &nbsp;·&nbsp; **[Report an issue](https://github.com/fabrikt-io/fabrikt/issues)**
+**[fabrikt-io/fabrikt](https://github.com/fabrikt-io/fabrikt)** &nbsp;·&nbsp; **[Maven Central](https://central.sonatype.com/artifact/io.fabrikt/fabrikt)** &nbsp;·&nbsp; **[Issues](https://github.com/fabrikt-io/fabrikt/issues)** &nbsp;·&nbsp; **[Discussions](https://github.com/fabrikt-io/fabrikt/discussions)**
